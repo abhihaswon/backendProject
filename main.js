@@ -1,9 +1,7 @@
 require("dotenv").config()
 const express = require('express')
 const createTable = require('./db/createtable')
-const usersDataValidation = require('./middleware/usersValidation')
 const usersRoute = require('./routes/userRoutes')
-
 
 const app = express()
 createTable()
