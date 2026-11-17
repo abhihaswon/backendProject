@@ -1,6 +1,7 @@
 
 const usersDataValidation = (req, res, next) => {
     const { name, age, email } = req.body;
+    console.log(req.body)
     console.log(name)
     console.log(email)
 
@@ -23,7 +24,7 @@ const usersDataValidation = (req, res, next) => {
             error: "Email is invalid"
         });
     }
-
+    
     next();
 };
 
