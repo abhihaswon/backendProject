@@ -1,4 +1,4 @@
-const {handleCreateUsers,handleUpdateUser,handleGetUsers,handleDeleteUser} = require('../controllers/users')
+const {handleCreateUsers,handlePatchUser,handleGetUsers,handleDeleteUser} = require('../controllers/users')
 const express = require('express')
 const usersDataValidation = require('../middleware/usersValidation')
 
@@ -6,7 +6,7 @@ const route = express.Router()
 
 route
 .post('/create',usersDataValidation,handleCreateUsers)
-.put('/update/:email',handleUpdateUser)
+.patch('/update/:email',handlePatchUser)
 .get('/users',handleGetUsers)
 .delete('/delete',handleDeleteUser)
 
